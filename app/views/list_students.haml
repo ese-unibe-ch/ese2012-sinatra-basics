@@ -1,0 +1,13 @@
+%link(rel="stylesheet" type="text/css" href="/style.css")
+%h1 Students
+%a{:href => "/logout"} Logout
+%ul
+  - for student in students
+    - if student.name == current_name
+      %li{:class => "selected"}
+        #{student.name} (your grade= #{student.average})
+    - else
+      %li{:class => nil} #{student.name}
+
+%hr
+Time: #{time.strftime("%H:%M:%S")}
