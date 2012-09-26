@@ -13,7 +13,7 @@ class App < Sinatra::Base
   enable :sessions
   set :public_folder, 'app/public'
 
-  configure do
+  configure :development do
      University::Student.named( 'Erwann' ).save()
      University::Student.named( 'Joel' ).save()
      University::Student.named( 'Aaron').save()
