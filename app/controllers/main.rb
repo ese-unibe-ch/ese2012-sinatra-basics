@@ -1,7 +1,7 @@
 require 'tilt/haml'
 require 'app/models/university/student'
 
-class App < Sinatra::Application
+class Main < Sinatra::Application
 
   get "/" do
 

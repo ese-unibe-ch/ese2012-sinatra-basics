@@ -5,7 +5,10 @@ require 'app/models/university/student'
 require 'app/controllers/main'
 require 'app/controllers/authentication'
 
-class App < Sinatra::Application
+class App < Sinatra::Base
+
+  use Authentication
+  use Main
 
   enable :sessions
   set :public_folder, 'app/public'
